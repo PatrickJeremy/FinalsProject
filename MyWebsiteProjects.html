@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Personal Website - Projects</title>
+<link rel="stylesheet" href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteStyle.css">
+<style>
+/* Loading Screen */
+#loading-screen {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(34,34,34,0.95);
+  color: white; display: flex;
+  justify-content: center; align-items: center;
+  font-size: 28px; z-index: 9999;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+#loading-screen.active {
+  opacity: 1; visibility: visible;
+}
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  animation: spin 1s linear infinite;
+  margin-right: 20px;
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="heading"><font face="Verdana">Welcome to My Website</font></h1>
+  <nav class="navigation">
+    <a href="C:\Users\Jeremy\Desktop\New folder\Index.html" class="load-link">Home</a>
+    <b>/</b>
+    <a href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteProjects.html" class="load-link">Projects</a>
+    <b>/</b>
+    <a href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteContact.html" class="load-link">Contact</a>
+  </nav>
+</header>
+<main>
+ 
+ <div class = bio>
+ <section>
+ <h1><b><u> Projects </b></u></h1>
+
+Bellow is a list of projects made during 'Web Design with Client Side Scripting' listed from oldest to latest. Enjoy! 
+
+ <ul>
+<div class="container">
+     <div class="row">
+     <div class="column">
+	 <img class="media_image" src="C:\Users\Jeremy\Desktop\New folder\First Webpage.png">
+	 <br>
+	 <br>
+	 <a href = "C:\Users\Jeremy\Desktop\New folder\HTML 1.html" target="_blank">Project 1: My First Webpage</a>
+         <h5>A simple webpage learning the basics of HTML</h5>
+	     
+	 </div>
+     <div class="column">
+	 <img class="media_image" src="C:\Users\Jeremy\Desktop\New folder\SDG.png">
+	 <br>
+	 <br>
+	 <a href = "C:\Users\Jeremy\Desktop\New folder\Castro_lab2.html" target="_blank">Project 2: SDG Webpage</a>
+         <h5>Webpage with the theme being one of the SDG's</h5>
+		 
+	 </div>
+     </div>
+
+     <div class="row">
+     <div class="column">
+	 <img class="media_image" src="C:\Users\Jeremy\Desktop\New folder\Periodic Table.png">
+	 <br>
+     <br>	 
+	 <a href = "C:\Users\Jeremy\Desktop\New folder\Table of Elements.html" target="_blank">Project 3: Table of Elements</a>
+         <h5>Activity used to learn about the implementation of tables in HTML</h5>
+	     
+	 </div>
+     <div class="column">
+	  <img class="media_image" src="C:\Users\Jeremy\Desktop\New folder\Form SDG.png">
+	  <br>
+	  <br>
+	  <a href = "C:\Users\Jeremy\Desktop\New folder\Form HTML.html" target="_blank">Project 4: HTML Form</a>
+         <h5 class="media_heading">Activity used to showcase the implementation of various forms in HTML as well as CSS</h5>
+	
+		 
+	 </div>
+     </div>
+	 
+	 <div class="row">
+     <div class="column">
+     <img class="media_image" src="C:\Users\Jeremy\Desktop\New folder\Grid.png">
+	 <br>
+     <br>	 
+	 <a href = "C:\Users\Jeremy\Desktop\New folder\SDG Grid.html" target="_blank">Project 5: SDG Grid</a>
+         <h5 class="media_heading">Activity used to showcase CSS and how to divide the webpage in various sections</h5>
+
+	     
+	 </div>
+	 
+	  <div class="column">
+	  <img class="media_image" src="C:\Users\Jeremy\Desktop\New folder\Home.png">
+	  <br>
+	  <br>
+	  <a href = "C:\Users\Jeremy\Desktop\New folder\Index.html" target="_blank">Project 6: Webpage Project</a>
+         <h5 class="media_heading">The project you are viewing right now! Clicking this will take you back to the homepage</h5>
+	
+	 </div>
+     </div>
+ 
+ </ul>
+
+ 
+ </main>
+ <footer>
+ <p>© 2025 My Website</p>
+ </footer>
+
+<div id="loading-screen">
+  <div class="spinner"></div>
+  Loading...
+</div>
+
+<script>
+const loadingScreen = document.getElementById('loading-screen');
+const links = document.querySelectorAll('.load-link');
+
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    loadingScreen.classList.add('active');
+    const url = this.href;
+    setTimeout(() => {
+      window.location.href = url;
+    }, 1500);
+  });
+});
+</script>
+</body>
+</html>

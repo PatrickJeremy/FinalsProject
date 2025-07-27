@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Do While Loop Example</title>
+</head>
+<body>
+ <h1>Counting from 1 to 10 with Do...While Loop</h1>
+ <div id="output"></div>
+ 
+ <script>
+   const output = document.getElementById("output");
+   let i = 1;
+ 
+   // Do...while loop to print numbers 1 to 10
+   do {
+     const p = document.createElement("p");
+     p.textContent = "Number: " + i;
+    output.appendChild(p);
+     i++;
+   } while (i <= 10);
+ </script>
+</body>
+</html>
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <title>Break and Continue Example</title>
+</head>
+<body>
+ <h1>Using break and continue in JavaScript</h1>
+ <div id="output"></div>
+ 
+ <script>
+   const output = document.getElementById("output");
+ 
+   for (let i = 1; i <= 10; i++) {
+     if (i === 5) {
+       // Skip number 5
+       const skip = document.createElement("p");
+      skip.textContent = "Skipped 5";
+      output.appendChild(skip);
+       continue;
+     }
+ 
+     if (i === 8) {
+       // Stop the loop completely at 8
+       const stop = document.createElement("p");
+      stop.textContent = "Stopped at 8";
+      output.appendChild(stop);
+       break;
+     }
+ 
+     const p = document.createElement("p");
+     p.textContent = "Number: " + i;
+    output.appendChild(p);
+   }
+ </script>
+</body>
+</html>
+ 

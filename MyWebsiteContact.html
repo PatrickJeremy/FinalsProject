@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Personal Website - Contact</title>
+<link rel="stylesheet" href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteStyle.css">
+<style>
+/* Loading Screen */
+#loading-screen {
+  position: fixed; top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(34,34,34,0.95);
+  color: white; display: flex;
+  justify-content: center; align-items: center;
+  font-size: 28px; z-index: 9999;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+#loading-screen.active {
+  opacity: 1; visibility: visible;
+}
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  animation: spin 1s linear infinite;
+  margin-right: 20px;
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="heading"><font face="Verdana">Welcome to My Website</font></h1>
+  <nav class="navigation">
+    <a href="C:\Users\Jeremy\Desktop\New folder\Index.html" class="load-link">Home</a>
+    <b>/</b>
+    <a href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteProjects.html" class="load-link">Projects</a>
+    <b>/</b>
+    <a href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteContact.html" class="load-link">Contact</a>
+  </nav>
+</header>
+<main>
+ <main>
+    <div class="bio">
+      <section>
+ <div style = "text-align: center";>
+ <br>
+ <br>
+<img src ="C:\Users\Jeremy\Desktop\New folder\Pi7_Passport_Photo (1).jpeg" width = "400px" height = "auto" ><br>
+</div>
+<div style = "text-align; right";>
+ <h1><u><b>About Me</b></u></h1>
+        <p>Currently studying in FEU Tech, former student of ADMU and High School Grauate from Claret School of Quezon City.</p>
+		<br>
+  <h1><u><b>Accolades</b></u></h1>
+        <ul>
+		<li>Graduate from Claret School of Quezon City</li>
+		<li>Obtained Best English Speaker Award in Grade School</li>
+        <li>Best English Speaker 3rd Place in High School</li>
+        <li>Creative Writing Club Member</li>
+        <li>Former Student of Creative Writing in ADMU for 3 Years</li>
+        <li>Currently Studying BSAGD in FEU Tech</li>		
+        </ul>
+        <br>
+  
+  <h1><u><b>Skills</b></u></h1>
+        <ul>
+          <li>Fluent in English</li>
+          <li>Strong Speaking Skills</li>
+          <li>Basic Understanding of C++</li>
+		  <li>Basic Understanding of HTML, CSS and Javascript</li>
+		  <li>Basic Understanding in Networking and Cybersecurity</li>
+        </ul>
+        <br>  
+
+        <h1><u><b>Contact Me</b></u></h1>
+        <p>If you're trying to contact me you can do so via the allowed avenues.</p>
+        <ul>
+          <li><u>Contact No</u>: <i>0956 520 1974</i></li>
+          <li><u>Email</u>: <i>patrickjeremycastro@gmail.com</i></li>
+          <li><u>School Email</u>: <i>202311669@fit.edu.ph</i></li>
+        </ul>
+        <br>
+        <p><i>Or... you can type in what you want to say via this form and send it to me so that I can see it later!</i></p>
+        <br>
+
+        <form class="form" id="contact-form">
+          <h1><u><b>Contact Form</b></u></h1>
+
+          <label>Name:</label>
+  <input type="text" name="name" required> <br>
+
+  <label>Email:</label>
+  <input type="email" name="email" required> <br><br>
+
+  <label>Message:</label>
+  <textarea name="message" rows="5" required></textarea> <br><br>
+
+  <button type="submit">Send</button>
+  <p class="success" id="response"></p>
+</form>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 My Website</p>
+  </footer>
+
+<div id="loading-screen">
+  <div class="spinner"></div>
+  Loading...
+</div>
+
+<script>
+const loadingScreen = document.getElementById('loading-screen');
+const links = document.querySelectorAll('.load-link');
+
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    loadingScreen.classList.add('active');
+    const url = this.href;
+    setTimeout(() => {
+      window.location.href = url;
+    }, 1500);
+  });
+});
+  
+  const scriptURL = "https://script.google.com/macros/s/AKfycbwaAgWOplwxF5hipmy3TpG7ap5o68EJG0RvFQRrZuDMK__MOSrWcoBT6xMQtAVJfic/exec"; 
+  const form = document.getElementById("contact-form");
+  const responseMsg = document.getElementById("response");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    fetch(scriptURL, {
+      method: "POST",
+      body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+      responseMsg.textContent = "Message sent successfully!";
+      form.reset();
+    })
+    .catch(error => {
+      responseMsg.textContent = "Error sending message.";
+      console.error("Error!", error.message);
+    });
+  });
+  </script>
+</body>
+</html>
+
+
+

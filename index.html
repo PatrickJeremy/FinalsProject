@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Personal Website - Home</title>
+<link rel="stylesheet" href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteStyle.css">
+<style>
+/* Loading Screen */
+#loading-screen {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(34,34,34,0.95);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  z-index: 9999;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+#loading-screen.active {
+  opacity: 1; visibility: visible;
+}
+.spinner {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #3498db;
+  border-radius: 50%;
+  width: 60px; height: 60px;
+  animation: spin 1s linear infinite;
+  margin-right: 20px;
+}
+@keyframes spin {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+</style>
+</head>
+<body>
+<header>
+  <h1 class="heading"><font face="Verdana">Welcome to My Website</font></h1>
+  <nav class="navigation">
+    <a href="C:\Users\Jeremy\Desktop\New folder\Index.html" class="load-link">Home</a>
+    <b>/</b>
+    <a href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteProjects.html" class="load-link">Projects</a>
+    <b>/</b>
+    <a href="C:\Users\Jeremy\Desktop\New folder\MyWebsiteContact.html" class="load-link">Contact</a>
+  </nav>
+</header>
+<main>
+  <aside>
+      <h2>Origins</h2>
+	  <br>
+      <p>Born in June 7, 2000. Patrick Jeremy Castro is a man of boundless creativity and imagination albeit lacking in ambition at times. Multiple time English Speaking award winner back in Grade School and High School as well as High School accelerant it seemed the life of Patrick was going to well. However due to constantly shifting courses in college as well as issues re-adjusting to school in a post-COVID world the progress of Patrick stalled for a time before eventually enrolling in FEU to persue an IT course in Animation and Game Design.
+	  <br><br>
+	  Also they probably saved the world or something <i>(no not really but it's cool to imagine right)?</i></p>
+</aside>
+ 
+ <div style = "text-align: center";>
+ <br>
+ <br>
+<img src ="C:\Users\Jeremy\Desktop\New folder\IMG_0969.png" width = "400px" height = "auto" ><br>
+<h1><font face = "Verdana">The Website / Blog of This Guy</font></h1>
+</div>
+
+<br>
+<br>
+<br>
+
+<div class = "bio">
+<br>
+<h1><u>This Website </u></h1>
+<p> Welcome to the homepage of the website! This website was made as an activity for my class in 'Web Design with Client Side Scripting' but I decided to have a little fun with it! In here you will find various information mostly about me: Patrick Jeremy Castro as well as other related trivia and tidbits ranging from wacky nerd lore. Rants about the state of world and everywhere in between (almost like my own personal blog isn't that fun). May you enjoy browsing through the webpage and maybe I can get a good grade for this? Who knows. </p>
+</div>
+
+<div class = "bio">
+<br>
+<h1><u> Personal Interests and Other Things </u></h1>
+<p> Trying to learn new skills can be surprisingly challenging especially when you're surrounded by tons of talented people posting their high-quality work online for the world to see or sharing stories how good they are in a specific thing. Right now I'm currently trying to learn how to draw, specifically <b>Digital Art</b> but the struggle in adjusting to how a drawing tablet feels as well as figuring out how to navigate these drawing softwares can be very intimidating especially when I feel like I feel the pressure to get good at it quickly when I'm going to college exactly for this reason. I know this is the wrong mindset to have but habits are hard to break especially the bad ones. <br><br>
+
+Other than drawing I originally tried my hand at writing which I quickly decided I wanted to keep as a hobby I'm also passionate about games not just playing them but understanding game design as well as since I find the thought process of making something interactive that is meant to be enjoyed fascinating in how deceptively difficult it can be. I hope I can eventually find the time and get the skillset to design a game of my own someday but I guess that's why I'm taking this course to begin with huh?</p>
+</div>
+
+<div class = "bio">
+<br>
+<h1><u>Media Literacy on the Decline?</u></h1>
+<p> Who knew I could find an outlet to talk about this in school for all things but I defintiely think people have become worse and worse in understanding media literacy. The whole "show don't tell" thing is a buzzword people spew out as a <i>gotcha!</i> to what they think is bad writting but the same people couldn't find subtext and subtlety until it was spelled out to them in bold letters and shouted out to the rooftops multiple times and they'd STILL have it fly over their heads.</p>
+</div>
+<br>
+<br>
+<br>
+
+ </main>
+ <footer>
+ <p>© 2025 My Website</p>
+ </footer>
+
+<div id="loading-screen">
+  <div class="spinner"></div>
+  Loading...
+</div>
+
+<script>
+const loadingScreen = document.getElementById('loading-screen');
+const links = document.querySelectorAll('.load-link');
+
+links.forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    loadingScreen.classList.add('active');
+    const url = this.href;
+    setTimeout(() => {
+      window.location.href = url;
+    }, 1500);
+  });
+});
+</script>
+</body>
+</html>

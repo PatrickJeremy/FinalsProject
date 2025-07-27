@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Grid System</title>
+<style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+	
+	 header {
+     background-color: #44643e;
+     color: white;
+     text-align: center;
+     padding: 15px 0;
+	 }
+	
+	.mainbox {
+      display: flex;
+      max-width: 1000px;
+      margin: 5px auto;
+      background-color: #fff;
+       }
+ 
+
+    .container {
+         max-width: 1000px;
+         margin: 5px auto;
+         background-color: #fff;
+    }
+ 
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+ 
+    .column {
+      flex: 1;
+      padding: 20px;
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+	  width: 800px;
+      text-align: center;
+	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+ 
+
+    @media screen and (max-width: 768px) {
+      .column {
+        flex: 0 0 48%; /* 2 columns per row on smaller screens */
+      }
+    }
+ 
+    @media screen and (max-width: 480px) {
+      .column {
+        flex: 0 0 100%; /* 1 column per row on very small screens */
+      }
+    }
+	
+	aside {
+        position: absolute;
+        right: 50px;
+        width: 300px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		
+    }
+	   
+	.media_image {
+         width: 30%;
+         height auto;
+    }  
+	
+</style>
+</head>
+<body>
+
+<header>
+   <h1>The 17 SDG's</h1>
+</header>
+
+ <br>
+ <br>
+
+   <aside>
+      <h2>History</h2>
+	  <br>
+       <p>The 2030 Agenda for Sustainable Development, adopted by all United Nations Member States in 2015, provides a shared blueprint for peace and prosperity for people and the planet, now and into the future. At its heart are the 17 Sustainable Development Goals (SDGs), which are an urgent call for action by all countries - developed and developing - in a global partnership. They recognize that ending poverty and other deprivations must go hand-in-hand with strategies that improve health and education, reduce inequality, and spur economic growth – all while tackling climate change and working to preserve our oceans and forests.</p>
+   </aside>
+
+
+<font face = "Verdana">
+<div class ="mainbox">
+ 
+     <div class="container">
+     <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\Sustainable_Development_Goal_01NoPoverty.svg.png"> 
+	 <h2>No Poverty</h2>
+         <h5 class="media_heading">End poverty in all its forms everywhere.</h5>
+		 <br>
+         Eradicating poverty is not a task of charity, it’s an act of justice and the key to unlocking an enormous human potential. Still, nearly half of the world’s population lives in poverty, and lack of food and clean water is killing thousands every single day of the year. Together, we can feed the hungry, wipe out disease and give everyone in the world a chance to prosper and live a productive and rich life.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-02-1024x1024.png">
+	  <h2>Zero Hunger</h2>
+         <h5 class="media_heading">End hunger, achieve food security and improved nutrition and promote sustainable agriculture. </h5>
+		 <br>
+         Hunger is the leading cause of death in the world. Our planet has provided us with tremendous resources, but unequal access and inefficient handling leaves millions of people malnourished. If we promote sustainable agriculture with modern technologies and fair distribution systems, we can sustain the whole world’s population and make sure that nobody will ever suffer from hunger again.
+		 
+	 </div>
+     </div>
+
+       <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\Sustainable_Development_Goal_03GoodHealth.svg.png">
+		 
+	 <h2>Good Health and Well-Being</h2>
+         <h5 class="media_heading">Ensure healthy lives and promote well-being for all at all ages.</h5>
+		 <br>
+         Over the last 15 years, the number of childhood deaths has been cut in half. This proves that it is possible to win the fight against almost every disease. Still, we are spending an astonishing amount of money and resources on treating illnesses that are surprisingly easy to prevent. The new goal for worldwide Good Health promotes healthy lifestyles, preventive measures and modern, efficient healthcare for everyone.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-04.png">
+	  <h2>Quality Education</h2>
+         <h5 class="media_heading">Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.</h5>
+		 <br>
+         Education liberates the intellect, unlocks the imagination and is fundamental for self-respect. It is the key to prosperity and opens a world of opportunities, making it possible for each of us to contribute to a progressive, healthy society. Learning benefits every human being and should be available to all.
+		 
+	 </div>
+     </div>
+	 
+	      <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-05-1024x1024.png">
+		 
+	 <h2>Gender Equality</h2>
+         <h5 class="media_heading">Achieve gender equality and empower all women and girls.</h5>
+		 <br>
+         Gender bias is undermining our social fabric and devalues all of us. It is not just a human rights issue; it is a tremendous waste of the world’s human potential. By denying women equal rights, we deny half the population a chance to live life at its fullest. Political, economic and social equality for women will benefit all the world’s citizens. Together we can eradicate prejudice and work for equal rights and respect for all.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-06.png">
+	  <h2>Clean Water and Sanitation</h2>
+         <h5 class="media_heading">Ensure availability and sustainable management of water and sanitation for all.</h5>
+		 <br>
+         One in three people live without sanitation. This is causing unnecessary disease and death. Although huge strides have been made with access to clean drinking water, lack of sanitation is undermining these advances. If we provide affordable equipment and education in hygiene practices, we can stop this senseless suffering and loss of life.
+		 
+	 </div>
+     </div>
+	 
+	      <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-07.png">
+		 
+	 <h2>Affordable and Clean Energy</h2>
+         <h5 class="media_heading">Ensure access to affordable, reliable, sustainable and modern energy for all.</h5>
+		 <br>
+         Renewable energy solutions are becoming cheaper, more reliable and more efficient every day.Our current reliance on fossil fuels is unsustainable and harmful to the planet, which is why we have to change the way we produce and consume energy. Implementing these new energy solutions as fast as possible is essential to counter climate change, one of the biggest threats to our own survival.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\images.png">
+	  <h2>Decent Work and Economic Growth</h2>
+         <h5 class="media_heading">Promote sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all.</h5>
+		 <br>
+         Economic growth should be a positive force for the whole planet.This is why we must make sure that financial progress creates decent and fulfilling jobs while not harming the environment. We must protect labour rights and once and for all put a stop to modern slavery and child labour. If we promote job creation with expanded access to banking and financial services, we can make sure that everybody gets the benefits of entrepreneurship and innovation.
+		 
+	 </div>
+     </div>
+	 
+	 <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-09.png">
+		 
+	 <h2>Industry, Innovation and Infrastructure</h2>
+         <h5 class="media_heading">Build resilient infrastructure, promote inclusive and sustainable industrialization and foster innovation.</h5>
+		 <br>
+         A functioning and resilient infrastructure is the foundation of every successful community. To meet future challenges, our industries and infrastructure must be upgraded. For this, we need to promote innovative sustainable technologies and ensure equal and universal access to information and financial markets. This will bring prosperity, create jobs and make sure that we build stable and prosperous societies across the globe.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-10.png">
+	  <h2>Reduced Inequalities</h2>
+         <h5 class="media_heading">Reduce inequality within and among countries.</h5>
+		 <br>
+         Too much of the world’s wealth is held by a very small group of people.This often leads to financial and social discrimination. In order for nations to flourish, equality and prosperity must be available to everyone – regardless of gender, race, religious beliefs or economic status. When every individual is self sufficient, the entire world prospers.
+		 
+	 </div>
+     </div>
+	 
+	 <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\Sustainable_Development_Goal_11SustainableCities.svg.png">
+		 
+	 <h2>Sustainable Cities and Communities</h2>
+         <h5 class="media_heading">Make cities and human settlements inclusive, safe, resilient and sustainable.</h5>
+		 <br>
+         The world’s population is constantly increasing.To accommodate everyone, we need to build modern, sustainable cities. For all of us to survive and prosper, we need new, intelligent urban planning that creates safe, affordable and resilient cities with green and culturally inspiring living conditions.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-12-1024x1024.png">
+	  <h2>Responsible Consumption and Production</h2>
+         <h5 class="media_heading">Ensure sustainable consumption and production patterns.</h5>
+		 <br>
+         Our planet has provided us with an abundance of natural resources.But we have not utilized them responsibly and currently consume far beyond what our planet can provide. We must learn how to use and produce in sustainable ways that will reverse the harm that we have inflicted on the planet.
+		 
+	 </div>
+     </div>
+	 
+	 <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\images.jpg">
+		 
+	 <h2>Climate Action</h2>
+         <h5 class="media_heading">Take urgent action to combat climate change and its impacts.</h5>
+		 <br>
+         Climate change is a real and undeniable threat to our entire civilization.The effects are already visible and will be catastrophic unless we act now. Through education, innovation and adherence to our climate commitments, we can make the necessary changes to protect the planet. These changes also provide huge opportunities to modernize our infrastructure which will create new jobs and promote greater prosperity across the globe.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\images (1).png">
+	  <h2>Life Below Water</h2>
+         <h5 class="media_heading">Conserve and sustainably use the oceans, seas and marine resources for sustainable development.</h5>
+		 <br>
+         Healthy oceans and seas are essential to our existence.They cover 70 percent of our planet and we rely on them for food, energy and water. Yet, we have managed to do tremendous damage to these precious resources. We must protect them by eliminating pollution and overfishing and immediately start to responsibly manage and protect all marine life around the world.
+		 
+	 </div>
+     </div>
+	 
+	 <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG goals_icons-individual-rgb-15.png">
+		 
+	 <h2>Life on Land</h2>
+         <h5 class="media_heading">Protect, restore and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, and halt and reverse land degradation and halt biodiversity loss.</h5>
+		 <br>
+         A flourishing life on land is the foundation for our life on this planet.We are all part of the planet’s ecosystem and we have caused severe damage to it through deforestation, loss of natural habitats and land degradation. Promoting a sustainable use of our ecosystems and preserving biodiversity is not a cause. It is the key to our own survival.
+	     
+	 </div>
+     <div class="column">
+	      <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-16-1024x1024.png">
+	  <h2>Peace, Justice and Strong Institutions</h2>
+         <h5 class="media_heading">Promote peaceful and inclusive societies for sustainable development, provide access to justice for all and build effective, accountable and inclusive institutions at all levels.</h5>
+		 <br>
+         Compassion and a strong moral compass is essential to every democratic society.Yet, persecution, injustice and abuse still runs rampant and is tearing at the very fabric of civilization. We must ensure that we have strong institutions, global standards of justice, and a commitment to peace everywhere.
+		 
+	 </div>
+     </div>
+	 
+	 <div class="row">
+     <div class="column">
+	     <img class="media_image" src="C:\Users\202311669\Desktop\New folder\E_SDG-goals_icons-individual-rgb-17-1024x1024.png">
+		 
+	 <h2>Partnerships for the Goals</h2>
+         <h5 class="media_heading">Strengthen the means of implementation and revitalize the global partnership for sustainable development.</h5>
+		 <br>
+         The Global Goals can only be met if we work together.International investments and support is needed to ensure innovative technological development, fair trade and market access, especially for developing countries. To build a better world, we need to be supportive, empathetic, inventive, passionate, and above all, cooperative.
+		 
+	
+	
+	 
+	 
+	 
+
+</div>
+</div>
+</font>
+
+</body>
+</html>
+
+
+
+
